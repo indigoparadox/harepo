@@ -1,0 +1,23 @@
+{
+  "name": "Check_MK Agent",
+  "version": "1.0.0",
+  "slug": "cmkagent",
+  "description": "Check_MK agent server for monitoring",
+  "url": "https://github.com/indigoparadox/hassio-cmkagent",
+  "arch": ["armhf", "armv7", "amd64", "i386"],
+  "startup": "services",
+  "hassio_role": "manager",
+  "privileged": ["SYS_ADMIN", "SYS_RAWIO", "SYS_TIME", "SYS_NICE"],
+  "host_dbus": true,
+  "usb": true,
+  "map": ["config:ro"],
+  "boot": "auto",
+  "init": false,
+  "schema": {
+  },
+  "options": {
+  },
+  "ports": {
+    "6556/tcp": 6556
+  }
+}
