@@ -1,6 +1,6 @@
 {
   "name": "Check_MK Agent",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "slug": "cmkagent",
   "description": "Check_MK agent server for monitoring",
   "url": "https://github.com/indigoparadox/hassio-cmkagent",
@@ -18,6 +18,6 @@
   "options": {
   },
   "ports": {
-    "22161/tcp": 22161
+    "6556/tcp": 6556
   }
 }

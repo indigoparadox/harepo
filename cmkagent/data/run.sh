@@ -9,5 +9,5 @@ fi
 
 bashio::log.info "Starting SSH server..."
 
-/usr/sbin/dropbear -p 22161 -F -E -r "$DROPBEAR_KEY"
+/usr/sbin/dropbear -p 6556 -F -E -r "$DROPBEAR_KEY"
 
