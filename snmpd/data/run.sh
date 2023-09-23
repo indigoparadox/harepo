@@ -20,7 +20,6 @@ cat "${SNMPD_CONFIG}"
 
 bashio::log.info "Starting SNMP server..."
 
-
 exec /usr/sbin/snmpd \
    -c "${SNMPD_CONFIG}" \
    $(bashio::config 'args') \
