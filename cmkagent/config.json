@@ -1,6 +1,6 @@
 {
   "name": "Check_MK Agent",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "slug": "cmkagent",
   "description": "Check_MK agent server for monitoring",
   "url": "https://github.com/indigoparadox/hassio-cmkagent",
