@@ -16,12 +16,22 @@
   "homeassistant_api": true,
   "hassio_api": true,
   "schema": {
-    "args": "str"
+    "community": "str",
+    "location": "str",
+    "name": "str",
+    "email": "str",
+    "args": "str",
+    "config": [{"line": "str"}]
   },
   "options": {
-    "args": "-f -c /config/snmpd.conf"
+    "community": "public",
+    "location": "",
+    "name": "",
+    "email": "",
+    "args": "-f -Lo",
+    "config": []
   },
   "ports": {
-    "8161/udp": 8161
+    "161/udp": 161
   }
 }
