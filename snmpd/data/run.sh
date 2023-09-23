@@ -1,7 +1,5 @@
 #!/usr/bin/with-contenv bashio
 
-killall snmpd
-
 bashio::log.info "Building SNMP config..."
 
 SNMPD_IP=`ip addr show eth0 | grep inet | sed 's/\s*inet \([0-9.]*\).*/\1/g'`

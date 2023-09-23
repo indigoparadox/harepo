@@ -1,6 +1,6 @@
 {
   "name": "SNMP Server (raw config)",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "slug": "snmpdraw",
   "description": "SNMP v2c server for monitoring",
   "url": "https://github.com/indigoparadox/hassio-snmpd",
