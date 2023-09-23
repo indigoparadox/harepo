@@ -21,7 +21,7 @@
     "name": "str",
     "email": "str",
     "args": "str",
-    "config": [{"line": "str"}]
+    "config": [{"": "str"}]
   },
   "options": {
     "community": "public",
