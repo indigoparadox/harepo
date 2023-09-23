@@ -9,5 +9,7 @@ fi
 
 bashio::log.info "Starting SSH server..."
 
+echo "$(bashio::config "authorized_keys")"
+
 /usr/sbin/dropbear -p 6556 -F -E -r "$DROPBEAR_KEY"
 
