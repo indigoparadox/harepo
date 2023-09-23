@@ -1,7 +1,7 @@
 #!/usr/bin/with-contenv bashio
 
 DROPBEAR_KEY=/data/dropbear.key
-SSH_DATA_PATH=/etc/dropbear
+SSH_DATA_PATH=/root/.ssh
 AUTH_KEYS_PATH=$SSH_DATA_PATH/authorized_keys
 
 if [ ! -f "$DROPBEAR_KEY" ]; then
@@ -12,6 +12,7 @@ fi
 bashio::log.info "Setting up authorized keys..."
 
 mkdir -p "$SSH_DATA_PATH"
+chmod 700 "$SSH_DATA_PATH"
 echo "$(bashio::config "authorized_keys")" > "$AUTH_KEYS_PATH"
 chmod 600 "$AUTH_KEYS_PATH"
 
