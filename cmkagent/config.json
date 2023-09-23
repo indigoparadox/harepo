@@ -10,7 +10,6 @@
   "privileged": ["SYS_ADMIN"],
   "full_access": true,
   "host_dbus": true,
-  "usb": true,
   "map": ["config:ro"],
   "boot": "auto",
   "init": false,

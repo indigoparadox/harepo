@@ -8,6 +8,6 @@ COPY data/run.sh /
 RUN chmod a+x /run.sh
 
 # Install requirements for add-on
-RUN apk add --no-cache net-snmp
+RUN apk add --no-cache net-snmp python3
 
 CMD [ "/run.sh" ]

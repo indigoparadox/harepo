@@ -1,18 +1,20 @@
 {
   "name": "SNMP Server (raw config)",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "slug": "snmpdraw",
   "description": "SNMP v2c server for monitoring",
   "url": "https://github.com/indigoparadox/hassio-snmpd",
   "arch": ["armhf", "armv7", "amd64", "i386"],
   "startup": "services",
   "hassio_role": "manager",
-  "privileged": ["NET_ADMIN", "SYS_ADMIN", "SYS_RAWIO", "SYS_TIME", "SYS_NICE"],
+  "privileged": ["SYS_ADMIN"],
+  "full_access": true,
   "host_dbus": true,
-  "usb": true,
   "map": ["config:ro"],
   "boot": "auto",
   "init": false,
+  "homeassistant_api": true,
+  "hassio_api": true,
   "schema": {
     "args": "str"
   },
@@ -20,7 +22,6 @@
     "args": "-f -c /config/snmpd.conf"
   },
   "ports": {
-    "161/udp": 161,
-    "161/tcp": 161
+    "8161/udp": 8161
   }
 }
