@@ -2,14 +2,14 @@
 
 snmp_trim_oid() {
 	# Trim off provided OID from testing OID.
-        OID_END="`echo $2 | sed "s/^$1//g"`"
-        if [ -n "$OID_END" ]; then
-                # Strip leading "." off of specified OID end.
-                OID_END="`echo $OID_END | sed 's/^\.//g'`"
-        else
-		# No OID end found.
-                OID_END=-1
-        fi
+   OID_END="`echo $2 | sed "s/^$1//g"`"
+   if [ -n "$OID_END" ]; then
+      # Strip leading "." off of specified OID end.
+      OID_END="`echo $OID_END | sed 's/^\.//g'`"
+   else
+      # No OID end found.
+         OID_END=-1
+   fi
 }
 
 snmp_proc_once() {
@@ -24,7 +24,7 @@ snmp_proc_once() {
 		SNMP_PROC_ONCE=1
 	elif [ "$1" = "-n" ]; then
 		snmp_trim_oid "$SNMP_OID" "$2"
-	        snmp_test "$SNMP_OID" "$(($OID_END + 1))"
+		snmp_test "$SNMP_OID" "$(($OID_END + 1))"
 		SNMP_PROC_ONCE=1
 	fi
 }
